@@ -23,7 +23,7 @@ public class DetailedTransaction implements Serializable {
         return zip;
     }
     public void setZip(String zip) {this.zip = zip; }
-
+    
     // account id
     public long getAccountId() {
         return accountId;
