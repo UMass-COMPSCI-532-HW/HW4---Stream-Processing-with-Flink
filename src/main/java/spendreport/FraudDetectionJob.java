@@ -50,7 +50,7 @@ public class FraudDetectionJob {
 		// System.out.println("Converted alert -> " + alert);
 		// DetailedAlertSink sink = new DetailedAlertSink();
 		// sink.invoke(alert, null);  //INFO
-
+		
 		// Test task 4
 		// DetailedTransaction smallSameZip =
 		// 		new DetailedTransaction("01003", 1L, 1_005L, 0.05);
