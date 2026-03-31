@@ -61,19 +61,19 @@ public class DetailedFraudDetector extends KeyedProcessFunction<Long, DetailedTr
     }
 
     // Tiny simulator for test
-    // static DetailedAlert simulateSequence(DetailedTransaction... sequence) {
-    //     DetailedTransaction saved = null;
-    //     for (DetailedTransaction tx : sequence) {
-    //         if (isExpired(saved, tx)) {
-    //             saved = null;
-    //         }
-    //         if (shouldTriggerAlert(saved, tx)) {
-    //             return DetailedAlert.fromTransaction(tx);   // pattern found -> return alert
-    //         }
-    //         if (tx.getAmount() < SMALL_AMOUNT) {
-    //             saved = tx;
-    //         }
-    //     }
-    //     return null;
-    // }
+     static DetailedAlert simulateSequence(DetailedTransaction... sequence) {
+         DetailedTransaction saved = null;
+         for (DetailedTransaction tx : sequence) {
+             if (isExpired(saved, tx)) {
+                 saved = null;
+             }
+             if (shouldTriggerAlert(saved, tx)) {
+                 return DetailedAlert.fromTransaction(tx);   // pattern found -> return alert
+             }
+             if (tx.getAmount() < SMALL_AMOUNT) {
+                 saved = tx;
+             }
+         }
+         return null;
+     }
 }
